@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Navbar from './Navbar';
+import MessageForm from './MessageForm';
+
+const ContactWrapper = styled.div`
+    display: grid;
+    grid-template-rows: 120px 90vh;
+    min-height: 100vh;
+    width: 99vw;
+
+    @media (max-width: 768px){
+
+    }
+
+    
+`
+
+const Contact = () => {
+
+        return (
+            <>
+                <ContactWrapper>
+                    <Navbar />
+                    <MessageForm />
+                </ContactWrapper>
+            </>
+        )
+    
+}
+
+export default Contact;
