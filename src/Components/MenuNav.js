@@ -57,7 +57,7 @@ const Ul = styled.ul`
 const MenuNav = ({ open }) => {
     return (
         <Ul className="nav-list" open={open}>
-            <Link to="/" className="nav-links">
+            <Link to="/Caleb_React_Website" className="nav-links">
                 <li>Home</li>
             </Link>
             <Link to="/Projects" className="nav-links">

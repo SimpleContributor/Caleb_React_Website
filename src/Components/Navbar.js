@@ -32,7 +32,7 @@ class Navbar extends Component {
     render() {
         return (
             <StyledNav>
-                <Link to="/" className="img-link">
+                <Link to="/Caleb_React_Website" className="img-link">
                     <img alt="Letter C logo" className="logo-img" src={Logo}></img>
                 </Link>
                 <Menu />
