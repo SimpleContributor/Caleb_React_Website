@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const FormContainer = styled.div`
 
-    background-color: lightgray;
+    background-color: #89BE9C;
     display: grid;
     grid-template-rows: 150px 900px;
     padding-left: 10%;
@@ -25,7 +25,7 @@ const FormContainer = styled.div`
 
 
     form.contact-form{
-        background-color: lightblue;
+        background-color: #62a87c;
         border-radius: 10px;
         display: grid;
         grid-template-rows: 1fr 1fr 2fr 1fr;
@@ -58,7 +58,7 @@ const FormContainer = styled.div`
     textarea{
         border: 1px solid #000;
         border-radius: 8px;
-        background-color: #999;
+        background-color: #70e0ff;
         box-sizing: border-box;
         outline: none;
         padding: 10px;
@@ -73,7 +73,7 @@ const FormContainer = styled.div`
 
     div.submit-button button{
         align-self: end;
-        background-color: #999;
+        background-color: #70e0ff;
         border: 1.5px solid #000;
         border-radius: 8px;
         font-size: 1.2rem;

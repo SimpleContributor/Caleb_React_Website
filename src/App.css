@@ -3,8 +3,12 @@
 }
 
 :root{
-  --large-font: monospace,;
-  --small-font: ;
+  --blue-crayola: #0178ff;
+  --sky-blue-crayola: #70e0ff;
+  --shiny-shamrock: #62a87c;
+  --non-photo-blue: #99e9ff;
+  --eton-blue: #89be9c;
+
 }
 
 h1,

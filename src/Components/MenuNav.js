@@ -31,7 +31,7 @@ const Ul = styled.ul`
 
     @media (max-width: 768px) {
         align-items: center;
-        background-color: wheat;
+        background-color: #62a87c;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 120px);
         height: 99vh;

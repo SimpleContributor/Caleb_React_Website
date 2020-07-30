@@ -10,7 +10,7 @@ import FCCLandingPage from './Img/FCCLandingPage.png';
 import GuessingGame from './Img/JSGuessGame.png';
 
 const ProjectsWrapper = styled.div`
-    background-color: lightgray;
+    background-color: #89BE9C;
     display: grid;
     min-height: 100vh;
     overflow-x: hidden;
@@ -32,7 +32,7 @@ const ProjectsWrapper = styled.div`
     }
 
     div.project{
-        background-color: gray;
+        background-color: #99E9FF;
         border-radius: 10px;
         padding: 10px;
     }
@@ -63,25 +63,7 @@ const Projects = () => {
                 <Navbar />
         
                     <div className="project-grid">
-                        <div className="project project0">
-                            <img className="project-tile" src={Placeholder}></img>
-                        </div>
 
-                        <div className="project project1">
-                            <img className="project-tile" src={Placeholder}></img>
-                        </div>
-
-                        <div className="project project2">
-                            <img className="project-tile" src={Placeholder}></img>
-                        </div>
-
-                        <div className="project project3">
-                            <img className="project-tile" src={Placeholder}></img>
-                        </div>
-
-                        <div className="project project4">
-                            <img className="project-tile" src={Placeholder}></img>
-                        </div>
 
                         <div className="project project5">
                             <a href="https://calebcoe.bitbucket.io/"
@@ -109,15 +91,14 @@ const Projects = () => {
                         </div>
 
                         <div className="project project8">
-                            <a href="https://codepen.io/UsernameChosen/pen/OJMxbrW?editors=0100"
+                            <a alt="Free Code Camp Tribute Page to Nikola Tesla"
+                                href="https://codepen.io/UsernameChosen/pen/OJMxbrW?editors=0100"
                                 target="_blank">
                                 <img className="project-tile" src={FCCTribute}></img>
                                 <p>FCC Tribute Page</p>
                             </a>
                         </div>
                     </div>
-  
-                <Footer />
             </ProjectsWrapper>
         </>
         )

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const StyledNav = styled.div`
     align-items: center;
-    background-color: wheat;
+    background-color: #62A87C;
     display: grid;
     grid-template-columns: 120px auto;
     height: 120px;
@@ -33,7 +33,7 @@ class Navbar extends Component {
         return (
             <StyledNav>
                 <Link to="/Caleb_React_Website" className="img-link">
-                    <img alt="Letter C logo" className="logo-img" src={Logo}></img>
+                    <img alt="Letter C logo links to home" className="logo-img" src={Logo}></img>
                 </Link>
                 <Menu />
             </StyledNav>
