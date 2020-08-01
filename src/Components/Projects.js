@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
-import Footer from './Footer';
-import Placeholder from './Img/placeholder-img.jpg';
 import FCCTribute from './Img/FCCTribute.png';
 import FCCSurvey from './Img/FCCSurvey.png';
 import FCCLandingPage from './Img/FCCLandingPage.png';
@@ -67,8 +64,9 @@ const Projects = () => {
 
                         <div className="project project5">
                             <a href="https://calebcoe.bitbucket.io/"
-                                target="_blank">
-                                <img className="project-tile" src={GuessingGame}></img>
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img alt="JavaScript Guessing Game" className="project-tile" src={GuessingGame}></img>
                                 <p>JavaScript Guessing Game</p>
                             </a>
                             
@@ -76,25 +74,27 @@ const Projects = () => {
 
                         <div className="project project6">
                             <a href="https://codepen.io/UsernameChosen/pen/eYJPOMj?editors=0110"
-                                target="_blank">
-                                <img className="project-tile" src={FCCLandingPage}></img>
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img alt="A landing page template for Free Code Camp" className="project-tile" src={FCCLandingPage}></img>
                                 <p>FCC Landing Page</p>
                             </a>
                         </div>
 
                         <div className="project project7">
                             <a href="https://codepen.io/UsernameChosen/pen/ExPQNPN?editors=0100"
-                                target="_blank">
-                                <img className="project-tile" src={FCCSurvey}></img>
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img alt="A survey form template for Free Code Camp" className="project-tile" src={FCCSurvey}></img>
                                 <p>FCC Survey Form</p>
                             </a> 
                         </div>
 
                         <div className="project project8">
-                            <a alt="Free Code Camp Tribute Page to Nikola Tesla"
-                                href="https://codepen.io/UsernameChosen/pen/OJMxbrW?editors=0100"
-                                target="_blank">
-                                <img className="project-tile" src={FCCTribute}></img>
+                            <a href="https://codepen.io/UsernameChosen/pen/OJMxbrW?editors=0100"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img alt="Tribute Page to Nikola Tesla for Free Code Camp" className="project-tile" src={FCCTribute}></img>
                                 <p>FCC Tribute Page</p>
                             </a>
                         </div>

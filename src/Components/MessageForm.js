@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const FormContainer = styled.div`
@@ -76,49 +75,110 @@ const FormContainer = styled.div`
         background-color: #70e0ff;
         border: 1.5px solid #000;
         border-radius: 8px;
+        cursor: pointer;
         font-size: 1.2rem;
         height: 65px;
         margin-bottom: 10px;
+        outline: none;
         width: 80%;
     }
 `
 
-const MessageForm = () => {
+class MessageForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        }
+    }
 
-    return (
-        <>
-                    <FormContainer className="contact-container">
-                        <div className="contact-heading">
-                            <h1>Want to tell me a secret?</h1>
-                            <p>Fill out this form to send me an email!</p>
-                            <p>Or send one directly to calebcoecode@gmail.com.</p>
-                        </div>
-                        <form action="submit" className="contact-form">
-                            <div className="contact-name"> 
-                                <label for="name">
-                                    <p>Name:</p>
-                                    <input placeholder="What is your name?" type="text" required></input>
-                                </label>
-                            </div>
-                            <div className="contact-email"> 
-                                <label for="email">
-                                    <p>Email:</p>
-                                    <input placeholder="What is your email?" type="email" required></input>
-                                </label>
-                            </div>
-                            <div className="contact-message"> 
-                                <label for="name">
-                                    <p>Message:</p>
-                                    <textarea placeholder="Enter your message here" required></textarea>
-                                </label>
-                            </div>
-                            <div className="submit-button">
-                                <button type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </FormContainer>
-        </>
-    )
+    handleSubmit(e) {
+        e.preventDefault();
+
+        fetch('http://localhost:3002/send', {
+            method: "POST",
+            body: JSON.stringify(this.state),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(
+            (response) => (response.json())
+        ).then((response) => {
+            if(response.status === 'success'){
+                alert("Message Sent!");
+                this.resetForm()
+            }else if(response.status === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+    }
+
+    resetForm(){
+        this.setState({name: '', email: '', message: ''})
+    }
+
+    render() {
+        return (
+            
+            <FormContainer className="contact-container">
+                <div className="contact-heading">
+                      <h1>Want to tell me a secret?</h1>
+                      <p>Fill out this form to send me an email!</p>
+                     <p>Or send one directly to calebcoecode@gmail.com.</p>
+                </div>
+                <form action="submit" className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                      <div className="contact-name"> 
+                          <label htmlFor="name">
+                              <p>Name:</p>
+                              <input placeholder="What is your name?" 
+                                        type="text" 
+                                        value={this.state.name} 
+                                        onChange={this.onNameChange.bind(this)} required></input>
+                          </label>
+                       </div>
+                    <div className="contact-email"> 
+                           <label htmlFor="email">
+                               <p>Email:</p>
+                            <input placeholder="What is your email?" 
+                                    type="email" 
+                                    value={this.state.email} 
+                                    onChange={this.onEmailChange.bind(this)} required></input>
+                        </label>
+                    </div>
+                    <div className="contact-message"> 
+                        <label htmlFor="name">
+                            <p>Message:</p>
+                            <textarea placeholder="Enter your message here" 
+                                        value={this.state.message} 
+                                        onChange={this.onMessageChange.bind(this)} required></textarea>
+                           </label>
+                       </div>
+                       <div className="submit-button">
+                         <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </FormContainer>
+            
+        )
+    }
+
+    onNameChange(event) {
+        this.setState({name: event.target.value})
+    }
+
+    onEmailChange(event) {
+        this.setState({email: event.target.value})
+    }
+
+    onMessageChange(event) {
+        this.setState({message: event.target.value})
+    }
+
+
+
 }
 
 export default MessageForm;
