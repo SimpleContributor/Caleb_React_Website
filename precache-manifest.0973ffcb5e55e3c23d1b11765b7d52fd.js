@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "203020f01ac00e2239a9241991c95c6d",
+    "revision": "4875ab84d83fc7ccad495e955a598cec",
     "url": "/Caleb_React_Website/index.html"
   },
   {
-    "revision": "0d631de4a134e29a5b04",
+    "revision": "67e5863314eed1360812",
     "url": "/Caleb_React_Website/static/css/main.e75eba4a.chunk.css"
   },
   {
-    "revision": "f193d2eb47b35cbc2921",
-    "url": "/Caleb_React_Website/static/js/2.13aeae9f.chunk.js"
+    "revision": "5c38bcbcf78bc1585b24",
+    "url": "/Caleb_React_Website/static/js/2.37c21e0f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Caleb_React_Website/static/js/2.13aeae9f.chunk.js.LICENSE.txt"
+    "url": "/Caleb_React_Website/static/js/2.37c21e0f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0d631de4a134e29a5b04",
-    "url": "/Caleb_React_Website/static/js/main.75245250.chunk.js"
+    "revision": "67e5863314eed1360812",
+    "url": "/Caleb_React_Website/static/js/main.0cb52f4b.chunk.js"
   },
   {
     "revision": "bce04525148fed5df791",
@@ -38,9 +38,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "16a7f83a594aad3badae8b51f06311f9",
     "url": "/Caleb_React_Website/static/media/JSGuessGame.16a7f83a.png"
-  },
-  {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/Caleb_React_Website/static/media/logo.5d5d9eef.svg"
   }
 ]);
